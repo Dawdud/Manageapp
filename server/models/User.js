@@ -1,24 +1,25 @@
-const Sequelize = require("sequelize");
-
-class User extends Model {}
-User.init(
-  {
-    username: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        len: [5, 10]
+const bcrypt = require("bcryptjs");
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define(
+    "User",
+    {
+      email: DataTypes.STRING,
+      password: DataTypes.STRING
+    },
+    {
+      freezeTableName: true,
+      instanceMathods: {
+        generateHash(password) {
+          return bcrypt.hash(password, bcrypt.genSaltSync(8));
+        },
+        validPassword(password) {
+          return bcrypt.compare(password, this.password);
+        }
       }
-    },
-    email: {
-      type: Sequelize.STRING,
-      allowNull: false
-    },
-    password: {
-      type: sequelize.STRING,
-      allowNull: false
     }
-  },
-  { sequelize, modelName: "user" }
-);
-module.exports = User;
+  );
+  User.associate = function(models) {
+    // associations can be defined here
+  };
+  return User;
+};

@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "dawid",
+    "password": "Polakinowiecki8.06.2012",
+    "database": "api",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "dawid",
+    "password": "Polakinowiecki8.06.2012",
+    "database": "api",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "dawid",
+    "password": "Polakinowiecki8.06.2012",
+    "database": "api",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}

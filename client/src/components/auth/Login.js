@@ -25,7 +25,7 @@ class LoginFrom extends Component {
   render() {
     return (
       <div className="login">
-        <h1 className="App-Intro"> {this.state.apiResponse}</h1>
+        <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="input-field">
             <label htmlFor="email">Email</label>

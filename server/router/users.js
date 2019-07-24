@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/login", (req, res) => res.send("Login Page"));
+
 
 router.get("/register", (req, res) => res.send("register Page"));
 
+
 router.post("/login", (req, res) => {
-  console.log(req.body);
+  console.log(req.body.email);
   res.send();
 });
 
