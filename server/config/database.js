@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-module.exports = new Sequelize("api", "dawid", "Polakinowiecki8.06.2012", {
+module.exports = new Sequelize("api", "dawid", "xxxxxxxx", {
   host: "localhost",
   dialect: "postgres",
   pool: {
